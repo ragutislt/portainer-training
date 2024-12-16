@@ -21,3 +21,17 @@ spec:
           ports:
             - containerPort: 8080
               name: api
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: api
+  name: api
+spec:
+  ports:
+    - port: 8080
+      targetPort: 8080
+      name: api
+  selector:
+    app: api
