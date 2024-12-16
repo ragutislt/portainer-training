@@ -1,0 +1,23 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: api
+  name: api
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: api
+  template:
+    metadata:
+      labels:
+        app: api
+    spec:
+      containers:
+        - name: api
+          image: dockersamples/wordsmith-api
+          ports:
+            - containerPort: 8080
+              name: api
