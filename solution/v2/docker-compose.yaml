@@ -1,0 +1,15 @@
+services:
+  db:
+    image: postgres:10.0-alpine
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d/
+
+  api:
+    image: dockersamples/wordsmith-api
+    deploy:
+      replicas: 2
+
+  web:
+    image: dockersamples/wordsmith-web
+    ports:
+      - "8080:80"
