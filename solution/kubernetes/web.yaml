@@ -34,4 +34,4 @@ spec:
       name: web
   selector:
     app: web
-  type: NodePort
+  type: LoadBalancer
