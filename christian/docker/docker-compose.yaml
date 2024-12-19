@@ -7,7 +7,7 @@ services:
   api:
     image: dockersamples/wordsmith-api
     deploy:
-      replicas: 2
+      replicas: 1
 
   web:
     image: dockersamples/wordsmith-web
