@@ -176,4 +176,4 @@ spec:
       name: web
   selector:
     app: web
-  type: ClusterIP
+  type: LoadBalancer
